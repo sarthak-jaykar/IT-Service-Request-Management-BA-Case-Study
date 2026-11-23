@@ -1,92 +1,101 @@
-# IT Service Request Management — Business Analyst Case Study
+# IT Service Request Management — Business Analysis Case Study
 
-## Project Overview
+![Business Analysis](https://img.shields.io/badge/Focus-Business%20Analysis-2457A7)
+![Requirements](https://img.shields.io/badge/Practice-Requirements%20Engineering-386CB0)
+![Process Modelling](https://img.shields.io/badge/Practice-BPMN%20Process%20Modelling-4C8C72)
+![Tools](https://img.shields.io/badge/Tools-Draw.io%20%7C%20Jira%20%7C%20Postman-6554C0)
 
-A practical Business Analyst case study demonstrating the end-to-end analysis and documentation of an IT Service Request Management system.
+An end-to-end, portfolio-based Business Analyst case study focused on analysing and improving an IT service request process. The work demonstrates how a business problem can be translated into documented requirements, process models, user stories, delivery work items, and API-level validation evidence.
 
-The project follows a realistic BA workflow from identifying the business problem and gathering requirements through process modelling, user stories, Jira implementation, API testing, and solution documentation.
+> **Project type:** Independent learning case study using a simulated business scenario. It is not a live client implementation or production ITSM deployment.
 
-## Business Problem
+## Business context
 
-Organizations often receive IT service requests through inconsistent channels, making it difficult to categorize, prioritize, track, and resolve requests efficiently.
+IT support requests can arrive through inconsistent channels, making it harder for employees and support teams to maintain a common view of request details, ownership, priority, and progress.
 
-The proposed system provides a structured process for submitting, classifying, prioritizing, tracking, and managing IT service requests.
+This case study explores a more structured service-request approach: capture requests consistently, define how they should be handled, make the process visible, and provide supporting requirements and test evidence.
 
-## Project Objective
+## Business analysis approach
 
-The objective was to analyze the business need, define clear requirements, model the current and proposed processes, translate requirements into user stories, implement the work in Jira, and analyze/test the supporting REST APIs.
+**Business problem → scope and requirements → AS-IS analysis → TO-BE process → user stories and acceptance criteria → Jira workflow → API testing evidence**
 
-## BA Approach
+The work connects the business view with delivery-oriented artefacts:
 
-**Business Problem → Stakeholder Analysis → Requirements → Process Modelling → User Stories → Jira Implementation → API Analysis & Testing → Proposed Solution**
+- **Requirements analysis:** business, functional, and non-functional requirements.
+- **Process analysis:** current-state and proposed process models, with improvement opportunities.
+- **Requirements elaboration:** user stories and acceptance criteria.
+- **Delivery support:** Jira epic, backlog items, priorities, and Kanban workflow.
+- **System interaction awareness:** mock REST API requests and response checks using Postman.
 
-## Tools Used
+## Process models
 
-* **Confluence** — Business documentation, BRD, requirements, user stories and acceptance criteria
-* **Draw.io / BPMN** — AS-IS and TO-BE process modelling
-* **Jira** — Epic, user stories, priorities and Kanban workflow
-* **Postman** — REST API testing and response validation
-* **GitHub** — Project documentation and portfolio evidence
+The diagrams below show the current-state process and the proposed process.
 
-## Key Deliverables
+| AS-IS process | TO-BE process |
+|---|---|
+| ![AS-IS IT service request process](process-models/IT%20mgmt%20draws-AS-IS%20process.drawio.png) | ![TO-BE IT service request process](process-models/IT%20mgmt%20draws-TO-BE%20process.drawio.png) |
 
-### Requirements Analysis
+[Open the editable Draw.io source](process-models/IT%20mgmt%20draws.drawio).
 
-* Business requirements
-* Functional requirements
-* Non-functional requirements
-* User stories
-* Acceptance criteria
+## Key deliverables
 
-### Process Modelling
+| BA activity | Deliverable |
+|---|---|
+| Business and requirements definition | [Business Requirements Document (BRD)](requirements/IT-Service-Request-Management-BRD.pdf) |
+| Requirements elaboration | [User Stories and Acceptance Criteria](user-stories/User-Stories-and-Acceptance-Criteria.pdf) |
+| Process analysis | [AS-IS process](process-models/IT%20mgmt%20draws-AS-IS%20process.drawio.png) · [TO-BE process](process-models/IT%20mgmt%20draws-TO-BE%20process.drawio.png) |
+| Agile delivery support | [Jira epic and user stories](jira/jira-epic-and-user-stories.png) · [Jira Kanban board](jira/jira-kanban-board.png) |
+| API testing evidence | [Postman test results](api-testing/postman-api-test-results.png) · [Postman collection](api-testing/IT%20Service%20Request%20Management%20API.postman_collection.json) |
+| Consolidated project report | [Business Analyst Case Study PDF](documentation/IT-Service-Request-Management-BA-Case-Study.pdf) |
 
-* AS-IS BPMN process
-* TO-BE BPMN process
-* Process improvement analysis
+## API testing scope
 
-### Jira Implementation
+A mock REST API is used to practise common service-request operations and response validation.
 
-* IT Service Request Management Epic
-* 9 user stories
-* Priorities
-* Kanban workflow
-* To Do → In Progress → Done workflow
+| Method | Demonstrated operation | Expected response shown in project |
+|---|---|---|
+| GET | Retrieve a service request | 200 OK |
+| POST | Create a service request | 201 Created |
+| PUT | Update a service request | 200 OK |
+| DELETE | Delete a service request | 200 OK |
 
-### API Analysis & Testing
+The API component is a learning exercise for understanding request/response behaviour. It does not represent a production ITSM backend.
 
-The project includes REST API testing using a mock API.
+## Tools and techniques
 
-| Method | Operation                | Result      |
-| ------ | ------------------------ | ----------- |
-| GET    | Retrieve service request | 200 OK      |
-| POST   | Create service request   | 201 Created |
-| PUT    | Update service request   | 200 OK      |
-| DELETE | Delete service request   | 200 OK      |
+- **Business analysis:** business problem framing, requirements documentation, user stories, acceptance criteria.
+- **Process modelling:** Draw.io, BPMN-style process diagrams, AS-IS / TO-BE analysis.
+- **Agile work management:** Jira epic, backlog items, prioritisation, and Kanban workflow.
+- **API exploration:** Postman, REST methods, response checks.
+- **Documentation and versioning:** PDF artefacts, Markdown, GitHub.
 
-Postman response validation was also implemented for expected HTTP status codes.
-
-## Repository Structure
+## Repository structure
 
 ```text
 IT-Service-Request-Management-BA-Case-Study/
-│
-├── requirements/
-├── process-models/
-├── user-stories/
-├── jira/
 ├── api-testing/
+│   ├── IT Service Request Management API.postman_collection.json
+│   └── postman-api-test-results.png
 ├── documentation/
-└── notes/
+│   └── IT-Service-Request-Management-BA-Case-Study.pdf
+├── jira/
+│   ├── jira-epic-and-user-stories.png
+│   └── jira-kanban-board.png
+├── process-models/
+│   ├── IT mgmt draws.drawio
+│   ├── IT mgmt draws-AS-IS process.drawio.png
+│   └── IT mgmt draws-TO-BE process.drawio.png
+├── requirements/
+│   ├── IT-Service-Request-Management-BRD.pdf
+│   └── Project_Working_Notes.md
+└── user-stories/
+    └── User-Stories-and-Acceptance-Criteria.pdf
 ```
 
-## Project Outcome
+## Outcome
 
-The project demonstrates the ability to translate a business problem into structured requirements, model business processes, define testable user stories, manage requirements through an Agile/Jira workflow, understand REST API interactions, and maintain professional BA documentation.
+This case study brings together core BA activities across the analysis-to-delivery lifecycle: framing a business problem, documenting requirements, analysing and modelling a process, defining testable user stories, organising delivery work, and reviewing basic API behaviour. The artefacts are intended to support a focused portfolio or interview walkthrough.
 
-## Evidence
+## Author
 
-The repository contains supporting documentation, BPMN diagrams, user stories, Jira evidence, Postman API testing evidence, and the complete case-study documentation.
-
-## Disclaimer
-
-The API testing component uses a mock REST API for demonstration and learning purposes. The API endpoints represent the type of operations that could support an IT service request system; they are not a production ITSM backend.
+**Sarthak Jaykar** · [GitHub](https://github.com/sarthak-jaykar) · [LinkedIn](https://www.linkedin.com/in/sarthak-jaykar/)
