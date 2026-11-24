@@ -94,7 +94,7 @@ IT-Service-Request-Management-BA-Case-Study/
 
 ## Outcome
 
-This case study brings together core BA activities across the analysis-to-delivery lifecycle: framing a business problem, documenting requirements, analysing and modelling a process, defining testable user stories, organising delivery work, and reviewing basic API behaviour. The artefacts are intended to support a focused portfolio or interview walkthrough.
+This case study brings together core BA activities across the analysis-to-delivery lifecycle: framing a business problem, documenting requirements, analysing and modelling a process, defining testable user stories, organising delivery work, and checking basic API request/response behaviour. The artefacts are intended to support a focused portfolio or interview walkthrough.
 
 ## Author
 
